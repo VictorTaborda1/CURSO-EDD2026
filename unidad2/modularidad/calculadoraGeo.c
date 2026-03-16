@@ -4,8 +4,8 @@
 
 int main(){
     double x, y;
-    printf("hola hay algo funcionando");
-    printf("hola bienvenido a la calculadora ");
+     // printf("hola hay algo funcionando");
+    printf("hola bienvenido a la calculadora \n");
     printf("selecciona que operacion deseas realizar");
     int opcion;
     do{
