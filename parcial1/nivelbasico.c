@@ -7,6 +7,7 @@ void bubbleSort(int arr[], int n);
 void selectionSort(int arr[], int n);
 void insertionSort(int arr[], int n) ;
 void mostrar();
+void mostrarArreglo();
 int main(){
     int opcion;
     printf("vamos a comenzar\n");
@@ -14,10 +15,11 @@ int main(){
         printf("bienvenido al sistema de ordenamiento de numeros ENTEROS\n");
         printf("seleciona la accion a realizar\n");
         printf("1. agregar numeros ENTEROS a la lista a ordenar\n");
-        printf("2. Ordenar segun el metodo BubbleSort\n");
-        printf("3. Ordenar segun el metodo SelectionSort\n");
-        printf("4. Ordenar segun el metodo insertSort\n");
-        printf("5. salir \n");
+        printf("2. mostrar arreglo\n");
+        printf("3. Ordenar segun el metodo BubbleSort\n");
+        printf("4. Ordenar segun el metodo SelectionSort\n");
+        printf("5. Ordenar segun el metodo insertSort\n");
+        printf("6. salir \n");
         scanf("%d",&opcion);
         switch (opcion){
             case 1: printf("ingresa el numero maximo de numeros que quieres ingresar");
@@ -31,15 +33,19 @@ int main(){
                     printf("\nLos numeros ingresados son:\n");
                     mostrar();
                     datosIngresados= 1; break;
+
             case 2:
-                    bubbleSort(arreglo, N);break;
+                    mostrarArreglo();break;
+
             case 3:
-                    selectionSort(arreglo,7);break;
+                    bubbleSort(arreglo, N);break;
             case 4:
-                    insertionSort(arreglo,7);break;
+                    selectionSort(arreglo,N);break;
+            case 5:
+                    insertionSort(arreglo,N);break;
 
         };
-    } while (opcion!=5) ;
+    } while (opcion!=6) ;
     
 
 return 0;
@@ -107,4 +113,13 @@ void mostrar(){
         printf("%d - ", arreglo[i]);
     }
     printf("\n ");
+}
+void mostrarArreglo(){
+    if (!datosIngresados){
+        printf("primero registra datos\n");
+        return;}
+        printf("\narreglo\n");
+        for(int i=0; i<N; i++){
+        printf("%d - ", arreglo[i]);}
+    printf("\n ");      
 }
