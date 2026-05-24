@@ -14,7 +14,7 @@ int main(){
         printf("3.calcular el volumen de una esfera\n");
         printf("4.calcular el volumen de un cubo\n");
         printf("5.salir\n");
-        scanf("%d", &opcion);
+        scanf("%d", &opcion); 
         switch (opcion){
             case 1:
                 printf(" escribe el radio del circulo  ");
