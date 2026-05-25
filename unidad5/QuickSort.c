@@ -8,15 +8,15 @@ void swap(int *a, int *b)
 
 // Función partición: coloca el pivote en su posición correcta 
 int partition(int arr[], int low, int high) { 
-int pivot = arr[high];  // elegimos el último elemento como pivote 
-int i = low; 
-for (int j = low; j < high; j++) { 
-    if (arr[j] < pivot) { 
+int pivot = arr[low];  // elegimos el último elemento como pivote 
+int i = high; 
+for (int j = high; j > low; j--) { 
+    if (arr[j] > pivot) { 
     swap(&arr[i], &arr[j]); 
-    i++; 
+    i--; 
     } 
 } 
-swap(&arr[i], &arr[high]); 
+swap(&arr[i], &arr[low]); 
 return i; 
 } 
 
