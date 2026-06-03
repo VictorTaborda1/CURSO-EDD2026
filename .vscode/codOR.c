@@ -36,7 +36,8 @@ do{
         break;
         case 3: mostrar();
          break;
-    }
+        }
+        printf("hola mundo");
 }while (opcion!=8);
 return 0;
 }
