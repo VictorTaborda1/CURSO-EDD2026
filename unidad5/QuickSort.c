@@ -13,9 +13,9 @@ int i = high;
 for (int j = high; j > low; j--) { 
     if (arr[j] > pivot) { 
     swap(&arr[i], &arr[j]); 
-    i--; 
-    } 
+    i--; } 
 } 
+
 swap(&arr[i], &arr[low]); 
 return i; 
 } 
