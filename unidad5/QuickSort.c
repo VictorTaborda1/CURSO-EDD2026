@@ -36,5 +36,7 @@ quickSort(data, 0, n - 1);
     for (int i = 0; i < n; i++) { 
     printf("%d ", data[i]); 
 } 
+printf("probemos la teoria");
 return 0;
+
  }
